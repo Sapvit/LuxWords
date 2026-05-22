@@ -109,7 +109,7 @@
 
 <body>
 
-<h2>Очки: <span id="score">0</span></h2>
+<h2>Points: <span id="score">0</span></h2>
 
 <div id="content">
 
@@ -117,13 +117,13 @@
 
     <div id="options"></div>
 
-    <button id="nextBtn">Далее</button>
+    <button id="nextBtn">Next</button>
 
 </div>
 
 <script>
 // --------------------------------------------------
-// СПИСОК СЛОВ — ТЫ МЕНЯЕШЬ ТОЛЬКО ЭТО!
+// WORDS LIST — CHANGE ONLY THIS (FILENAMES IN IMG MUST MATCH PRECISELY)!
 // --------------------------------------------------
 const words = [
     "D'Brout",
@@ -134,7 +134,7 @@ const words = [
 ];
 
 // --------------------------------------------------
-// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
+// SUPPORT FUNCTIONS
 // --------------------------------------------------
 function shuffle(arr) {
     return arr.sort(() => Math.random() - 0.5);
@@ -156,7 +156,7 @@ let index = 0;
 let score = 0;
 
 // --------------------------------------------------
-// ОТРИСОВКА КАРТОЧКИ
+// CARD
 // --------------------------------------------------
 function loadCard() {
     const card = cards[index];
@@ -177,7 +177,7 @@ function loadCard() {
 }
 
 // --------------------------------------------------
-// ПРОВЕРКА ОТВЕТА
+// ANSWER VERIFICATION
 // --------------------------------------------------
 function checkAnswer(div, opt) {
     const correct = cards[index].answer;
@@ -193,7 +193,7 @@ function checkAnswer(div, opt) {
 }
 
 // --------------------------------------------------
-// КНОПКА "ДАЛЕЕ"
+// NEXT BUTTON
 // --------------------------------------------------
 document.getElementById("nextBtn").onclick = () => {
     if (!document.getElementById("nextBtn").classList.contains("active")) return;
@@ -210,7 +210,7 @@ document.getElementById("nextBtn").onclick = () => {
 };
 
 // --------------------------------------------------
-// СТАРТ
+// START
 // --------------------------------------------------
 loadCard();
 </script>
